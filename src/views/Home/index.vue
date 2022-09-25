@@ -1,6 +1,8 @@
 <template>
-  <el-container style="height: 100px">
-    <el-aside width="auto">Aside</el-aside>
+  <el-container>
+    <el-aside width="auto">
+      <component-aside></component-aside>
+    </el-aside>
     <el-container>
       <el-header>Header</el-header>
       <el-main>Main</el-main>
@@ -9,8 +11,12 @@
 </template>
 
 <script>
+import ComponentAside from '@/components/componentAside.vue'
 export default {
   name: 'Home',
+  components: {
+    ComponentAside
+  },
   data() {
     return {}
   }
