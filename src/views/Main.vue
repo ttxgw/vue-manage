@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container style="height: 100%">
     <el-aside width="auto">
       <component-aside></component-aside>
     </el-aside>
