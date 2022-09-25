@@ -40,6 +40,7 @@
 
 <script>
 export default {
+  name: 'ComponentAside',
   data() {
     return {
       isCollapse: false,

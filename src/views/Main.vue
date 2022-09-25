@@ -4,7 +4,9 @@
       <component-aside></component-aside>
     </el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        <component-header></component-header>
+      </el-header>
       <el-main>
         <router-view></router-view>
       </el-main>
@@ -14,10 +16,12 @@
 
 <script>
 import ComponentAside from '@/components/componentAside.vue'
+import ComponentHeader from '@/components/componentHeader.vue'
 export default {
   name: 'Home',
   components: {
-    ComponentAside
+    ComponentAside,
+    ComponentHeader
   },
   data() {
     return {}
