@@ -108,6 +108,7 @@ export default {
     hasChildren() {
       return this.menu.filter((item) => item.children)
     },
+    // 左侧折叠
     isCollapse() {
       return this.$store.state.tab.isCollapse
     }
