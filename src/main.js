@@ -7,6 +7,8 @@ import '@/elementUI/index.js'
 
 import './assets/less/index.less'
 
+import '@/api/mock.js'
+
 Vue.config.productionTip = false
 
 new Vue({

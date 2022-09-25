@@ -59,50 +59,14 @@
 </template>
 
 <script>
-import { getMenu } from '../../api/data.js'
+import { getData } from '@/api/data.js'
 export default {
   name: 'Home',
   data() {
     return {
+      userImg: require('@/assets/images/user.png'),
       // 表格数据
-      tableData: [
-        {
-          name: 'oppo',
-          todaybuy: 100,
-          monthbuy: 300,
-          totalbuy: 800
-        },
-        {
-          name: 'vivo',
-          todaybuy: 100,
-          monthbuy: 300,
-          totalbuy: 800
-        },
-        {
-          name: '苹果',
-          todaybuy: 100,
-          monthbuy: 300,
-          totalbuy: 800
-        },
-        {
-          name: '三星',
-          todaybuy: 100,
-          monthbuy: 300,
-          totalbuy: 800
-        },
-        {
-          name: '魅族',
-          todaybuy: 100,
-          monthbuy: 300,
-          totalbuy: 800
-        },
-        {
-          name: 'oppo',
-          todaybuy: 100,
-          monthbuy: 300,
-          totalbuy: 800
-        }
-      ],
+      tableData: [],
       tableLabel: {
         name: '手机',
         todaybuy: '今日购买',
@@ -147,13 +111,15 @@ export default {
           icon: 's-goods',
           color: '#5ab1ef'
         }
-      ],
-      userImg: require('@/assets/images/user.png')
+      ]
     }
   },
   mounted() {
-    getMenu().then((res) => {
-      console.log(res)
+    getData().then((res) => {
+      const { code, data } = res.data
+      if (code === 20000) {
+        this.tableData = data.tableData
+      }
     })
   }
 }
