@@ -1,10 +1,10 @@
 import axios from 'axios'
 import config from '../config'
 
-const baseUrl = process.env.NODE_ENV === 'development' ? config : config.baseUrl.pro
+const baseUrl = process.env.NODE_ENV === 'development' ? config.baseUrl.dev : config.baseUrl.pro
 
 class HttpRequest {
-  constructor(baseUrl) {
+  constructor (baseUrl) {
     this.baseUrl = baseUrl
   }
 
@@ -41,10 +41,10 @@ class HttpRequest {
   }
 
   request(options) {
-    const Instance = axios.create()
+    const instance = axios.create()
     options = { ...this.getInsideConfig(), ...options }
-    this.interceptors(Instance)
-    return Instance(options)
+    this.interceptors(instance)
+    return instance(options)
   }
 }
 

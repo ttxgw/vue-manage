@@ -7,9 +7,11 @@ import '@/elementUI/index.js'
 
 import './assets/less/index.less'
 
-import '@/api/mock.js'
+import '../src/api/mock.js'
+import http from 'axios'
 
 Vue.config.productionTip = false
+Vue.prototype.$http = http
 
 new Vue({
   router,
