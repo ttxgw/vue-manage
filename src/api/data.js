@@ -10,7 +10,7 @@ export const getMenu = (param) => {
 
 export const getData = () => {
   return axios.request({
-    url: '/Home/getData',
+    url: '/home/getData',
     method: 'get'
   })
 }

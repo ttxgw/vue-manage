@@ -6,8 +6,9 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Main',
     component: () => import('../views/Main.vue'),
+    redirect: '/home',
     children: [
       {
         path: '/home',
@@ -18,6 +19,21 @@ const routes = [
         path: '/user',
         name: 'user',
         component: () => import('../views/User')
+      },
+      {
+        path: '/mall',
+        name: 'mall',
+        component: () => import('../views/Mall')
+      },
+      {
+        path: '/page1',
+        name: 'page1',
+        component: () => import('../views/Other/pageOne.vue')
+      },
+      {
+        path: '/page2',
+        name: 'page2',
+        component: () => import('../views/Other/pageTwo.vue')
       }
     ]
   }

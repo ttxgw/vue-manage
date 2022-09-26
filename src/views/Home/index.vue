@@ -79,7 +79,7 @@ import { getData } from '@/api/data.js'
 // import * as echarts from 'echarts'
 import Echart from '@/components/echarts.vue'
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
     Echart
   },

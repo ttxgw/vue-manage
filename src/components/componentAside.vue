@@ -32,7 +32,9 @@
         v-for="(subItem, subindex) in item.children"
         :key="subItem.path"
       >
-        <el-menu-item :index="subindex + ''">{{ subItem.label }}</el-menu-item>
+        <el-menu-item @click="clickMenu(subItem)" :index="subindex + ''">{{
+          subItem.label
+        }}</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
   </el-menu>
@@ -49,11 +51,11 @@ export default {
           name: 'home',
           label: '首页',
           icon: 's-home',
-          url: 'Home/Home'
+          url: 'home/home'
         },
         {
-          path: '/mail',
-          name: 'mail',
+          path: '/mall',
+          name: 'mall',
           label: '商品管理',
           icon: 'video-play',
           url: 'MallManage/MallManage'
@@ -99,6 +101,7 @@ export default {
       this.$router.push({
         name: item.name
       })
+      this.$store.commit('selectMenu', item)
     }
   },
   computed: {
