@@ -18,7 +18,7 @@
 <script>
 import ComponentAside from '@/components/componentAside.vue'
 import ComponentHeader from '@/components/componentHeader.vue'
-import CommonTag from '@/components/CommonTag.vue'
+import CommonTag from '@/components/commonTag.vue'
 
 export default {
   name: 'Home',

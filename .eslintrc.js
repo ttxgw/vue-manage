@@ -16,7 +16,11 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'space-before-function-paren': 'off',
     'vue/valid-template-root': 'off',
-    'prefer-const': 'off'
+    'prefer-const': 'off',
+    'vue/no-mutating-props': 'off',
+    camelcase: 'off',
+    'array-callback-return': 'off',
+    'no-unused-expressions': 'off'
 
   }
 }
